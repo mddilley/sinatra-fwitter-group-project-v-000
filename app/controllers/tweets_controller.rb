@@ -43,7 +43,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  patch '/tweets/:id'
+  patch '/tweets/:id' do
     tweet = Tweet.find(params[:id])
     if params[:content] != ""
       tweet.update(:content => params[:content])
@@ -51,4 +51,5 @@ class TweetsController < ApplicationController
       redirect to "/tweets/#{params[:id]}/edit"
     end
   end
+
 end
