@@ -43,5 +43,5 @@ class TweetsController < ApplicationController
     end
   end
 
-  post '/tweets/:id'
+  patch '/tweets/:id'
 end
