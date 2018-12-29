@@ -44,4 +44,11 @@ class TweetsController < ApplicationController
   end
 
   patch '/tweets/:id'
+    tweet = Tweet.find(params[:id])
+    if params[:content] != ""
+      tweet.update(:content => params[:content])
+    else
+      redirect to "/tweets/"
+    end
+  end
 end
