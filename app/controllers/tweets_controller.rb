@@ -18,7 +18,11 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    binding.pry
+    # binding.pry
+    # if params[:content] != ""
+      tweet = Tweet.create(:content => params[:content], :user_id => session[:id])
+    # else
+    #   redirect
   end
 
 end
