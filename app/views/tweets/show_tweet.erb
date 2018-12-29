@@ -3,5 +3,9 @@
 <a href="/tweets/<%=@tweet.id%>/edit">Edit Tweet</a>
 
 <p>
-<a href="/tweets/delete">Delete Tweet</a>
+<form action="/tweets/<%=@tweet.id%>/delete" method="post">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Tweet" id="Delete Tweet">
+  
+</form>
 </p>
