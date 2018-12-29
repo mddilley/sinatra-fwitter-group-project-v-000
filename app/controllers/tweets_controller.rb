@@ -18,7 +18,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    
+    binding.pry
   end
 
 end
