@@ -55,7 +55,7 @@ class TweetsController < ApplicationController
   delete '/tweets/:id/delete' do
     tweet = Tweet.find(params[:id])
     binding.pry
-    if is_loggedin? && (current_user.id == session[:id])
+    if is_loggedin? && (tweet.user_id == current_user.id)
       tweet.delete
     else
       redirect to "/login"
